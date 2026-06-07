@@ -11,7 +11,6 @@ import {
   AirQualityResponse,
   WeatherData,
 } from '../models/weather.models';
-import 'dotenv'
 import {environment} from "../../../environments/environment.prod";
 @Injectable({
   providedIn: 'root',
