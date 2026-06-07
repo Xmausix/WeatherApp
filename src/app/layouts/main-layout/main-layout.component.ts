@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { StorageService } from '../../core/services/storage.service';
-import { ThemeToggleComponent } from '../../shared/components/theme-toggle/theme-toggle.component';
-import { SearchInputComponent } from '../../shared/components/search-input/search-input.component';
+import { ThemeToggleComponent } from '../../shared/components';
+import { SearchInputComponent } from '../../shared/components';
 import { GeolocationService } from '../../core/services/geolocation.service';
 import { WeatherService } from '../../core/services/weather.service';
 import { GeoLocation } from '../../core/models/weather.models';
@@ -20,7 +20,7 @@ import { GeoLocation } from '../../core/models/weather.models';
           <div class="flex items-center justify-between h-14">
             <!-- Logo -->
             <a routerLink="/" class="flex items-center gap-2.5 group">
-              <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-sm">
+              <div class="w-8 h-8 rounded-lg  flex items-center justify-center shadow-sm">
                 <svg class="w-4.5 h-4.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
                 </svg>

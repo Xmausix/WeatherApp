@@ -1,7 +1,7 @@
 import { Component, input, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WeatherIconComponent } from '../../../shared/components/weather-icon/weather-icon.component';
-import { GlassCardComponent } from '../../../shared/components/glass-card/glass-card.component';
+import { WeatherIconComponent } from '../../../shared/components';
+import { GlassCardComponent } from '../../../shared/components';
 import { CurrentWeather } from '../../../core/models/weather.models';
 import { StorageService } from '../../../core/services/storage.service';
 

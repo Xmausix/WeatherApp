@@ -1,6 +1,6 @@
 import { Injectable, inject, signal, computed } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable, catchError, map, of, throwError, forkJoin, switchMap } from 'rxjs';
+import { Observable, catchError, map, of, forkJoin, switchMap } from 'rxjs';
 import {
   CurrentWeather,
   ForecastResponse,
@@ -11,16 +11,17 @@ import {
   AirQualityResponse,
   WeatherData,
 } from '../models/weather.models';
-
+import 'dotenv'
+import {environment} from "../../../environments/environment.prod";
 @Injectable({
   providedIn: 'root',
 })
 export class WeatherService {
   private http = inject(HttpClient);
 
-  private readonly apiKey = 'demo_api_key';
-  private readonly baseUrl = 'https://api.openweathermap.org/data/2.5';
-  private readonly geoUrl = 'https://api.openweathermap.org/geo/1.0';
+  private readonly apiKey = environment.openWeatherApiKey;
+  private readonly baseUrl = environment.openWeatherBaseUrl;
+  private readonly geoUrl = environment.openWeatherGeoUrl
 
   readonly loading = signal(false);
   readonly error = signal<string | null>(null);

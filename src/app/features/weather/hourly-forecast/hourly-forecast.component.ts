@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WeatherIconComponent } from '../../../shared/components/weather-icon/weather-icon.component';
+import { WeatherIconComponent } from '../../../shared/components';
 import { HourlyForecast } from '../../../core/models/weather.models';
 
 @Component({
