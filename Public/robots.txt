@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /assets/
+
+# Sitemap (opcjonalnie)
+Sitemap: https://weathernow.pl/
